@@ -7,8 +7,35 @@ import InterviewImg from '../images/image78.png'
 import JobTalks from '../images/jobtalks.png'
 import Workshops from '../images/workshop.png'
 import Headphones from '../images/headphones.png'
+import axios from 'axios'
+import {useState, useEffect} from 'react'
 
 function Home() {
+
+    const [articles, setArticles] = useState([])
+
+//function to call API
+
+const getArticles = async () => {
+  try {
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/articles`)
+
+    setArticles(response.data)
+    console.log(response.data)
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+//We need to call the function in a specific moment
+useEffect(()=> {
+  getArticles();
+},[])
+
+
+
+
+
   return (
     <div className='homepage'>
         <div className='section1-home'>
@@ -90,14 +117,29 @@ Ao longo das várias etapas vais ter a acesso a cursos, artigos, templates e mui
     <h4 className='recursos-small-h4'>Webinares</h4>
     <p className='recursos-small-p'>Conversas informativas online dadas por um orador representante de uma empresa. </p>
     </div>
-    
-   
-
     </div>
 
 
 
+
+
     </div>
+    <div className='section5-home'>
+    <h2 className='section4-h2'>Os Nossos Parceiros</h2>
+    <p className='section4-p'>JobCoach dá-te acesso a vários recursos para te tornares num expert da procura de trabalho.</p>
+
+
+    {articles.map((article)=>{
+      return(
+        <div key={article._id} className='ArticleCard card'>
+        <h3>{article.name}</h3>
+        </div>
+      )
+    })}
+
+    </div>
+
+
 
 
         
