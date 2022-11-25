@@ -78,12 +78,55 @@ nav{
   width: 250px;
   height: 250px;
   margin-left: 20px;
+  box-shadow: -10px -3px 20px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
 }
 
 .cvimg{
-  position: relative;
+  position: absolute;
   width:130px;
   height: 130px;
   margin-right: 200px;
   padding-top: 20px;
+}
+
+.h3-cv{
+  padding-top: 70px;
+  padding-right: 80px;
+  color: #373F41;
+}
+
+.p-cv{
+  padding-top: 10px;
+  width: 200px;
+  padding-left: 20px;
+  color: #373F41;
+}
+
+.section4-home-cm{
+  background-color: #F4EFE9;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  margin-left: 120px;
+  box-shadow: -10px -3px 20px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
+}
+
+.cmimg{
+  position: absolute;
+  width:130px;
+  height: 130px;
+}
+
+.h3-cm{
+  padding-top: 60px;
+  padding-right: 80px;
+  color: #373F41;
+}
+
+.p-cm{
+  width: 180px;
+  padding-left: 40px;
+  color: #373F41;
 }
