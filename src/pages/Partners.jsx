@@ -8,7 +8,7 @@ function Partners() {
     <div className="img">
         <h1>Parceiros JobCoach</h1>
         <p>Todos os nossos parceiros numa só página. Faz parte desta aventura e junta-te a nós!</p>
-        <img clasName="people" src={People} alt="" />
+        <img id="people" src={People} alt="people" />
     </div>
 
     <div className='div2'>

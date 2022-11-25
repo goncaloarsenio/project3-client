@@ -14,6 +14,10 @@ nav{
   height:90px;
 }
 
+#people {
+  width: 70vw;
+}
+
 .middle-nav{
   display: flex;
 	flex-direction: row;
@@ -36,4 +40,8 @@ nav{
   text-decoration: none;
   color: black;
   font-weight: bold;
+}
+
+#x {
+  width: 70vw;
 }
