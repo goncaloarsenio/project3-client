@@ -17,7 +17,7 @@ function Navbar(){
         <Link className="middle-nav-link">
             <p>Cursos</p>
         </Link>
-        <Link className="middle-nav-link">
+        <Link to="/partners" className="middle-nav-link">
             <p>Parceiros</p>
         </Link>
         </div>
