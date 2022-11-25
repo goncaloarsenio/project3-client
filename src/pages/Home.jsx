@@ -4,6 +4,9 @@ import PCImg from '../images/pcimg.png'
 import CvImg from '../images/image75.png'
 import CmImg from '../images/image76.png'
 import InterviewImg from '../images/image78.png'
+import JobTalks from '../images/jobtalks.png'
+import Workshops from '../images/workshop.png'
+import Headphones from '../images/headphones.png'
 
 function Home() {
   return (
@@ -15,6 +18,8 @@ function Home() {
         </div>
         <img src={PCImg} alt=""  className='pcimg'/>
         </div>
+
+
         <div className='section2-home'>
         <h2 className='section2-h2'>Processo Job Coach</h2>
         <p className='section2-p'>JobCoach oferece-te um processo de coaching para que consigas enviar as tuas candidaturas sem medos para as empresas que mais ambicionas trabalhar.
@@ -23,6 +28,8 @@ Ao longo das várias etapas vais ter a acesso a cursos, artigos, templates e mui
 
 
         <div className='section3-home'>
+
+
         <div className='section3-home-curriculo'>
         <div>
         <img src={CvImg} alt="" className='cvimg' />
@@ -30,19 +37,70 @@ Ao longo das várias etapas vais ter a acesso a cursos, artigos, templates e mui
         <h3 className='h3-cv'>Currículo</h3>
         <p className='p-cv'>Escolhe o currículo que melhor se adequa à tua área e à empresa a que te queres candidatar.</p>
         </div>
-        </div>
-
-
         
-        <div className='section4-home'>
-        <div className='section4-home-cm'>
+
+
+
+        <div className='section3-home-cm'>
         <div>
         <img src={CmImg} alt="" className='cmimg' />
         </div>
         <h3 className='h3-cm'>Carta de Motivação</h3>
         <p className='p-cm'>Mostra que queres mesmo este emprego e explica de que forma és a melhor pessoa para o trabalho.</p>
         </div>
+
+
+
+        <div className='section3-home-curriculo'>
+        <div>
+        <img src={InterviewImg} alt="" className='cvimg' />
         </div>
+        <h3 className='h3-cv'>Entrevistas</h3>
+        <p className='p-cv'>Prepara-te para a tua entrevista presencial ou online.</p>
+        </div>
+
+</div>
+
+    <div className='section4-home'>
+    <h2 className='section4-h2'>Não te fiques pelo básico</h2>
+    <p className='section4-p'>JobCoach dá-te acesso a vários recursos para te tornares num expert da procura de trabalho.</p>
+
+
+    <div className='section4-recursos'>
+
+
+    <div className='recursos-small'>
+    <img src={JobTalks} alt="" />
+    <h4 className='recursos-small-h4'>Job Talks</h4>
+    <p className='recursos-small-p'>Palestras informativas e demonstrativas de um determinados tema, dadas por uma entidade especializada na área.</p>
+    </div>
+
+    <hr />
+
+    <div className='recursos-small'>
+    <img src={Workshops} alt="" />
+    <h4 className='recursos-small-h4'>Workshops</h4>
+    <p className='recursos-small-p'>Cursos físicos ou online que envolvem a realização de uma tarefa prática relacionada com o tema lecionado. </p>
+    </div>
+
+ <hr />
+
+<div className='recursos-small'>
+    <img src={Headphones} alt="" />
+    <h4 className='recursos-small-h4'>Webinares</h4>
+    <p className='recursos-small-p'>Conversas informativas online dadas por um orador representante de uma empresa. </p>
+    </div>
+    
+   
+
+    </div>
+
+
+
+    </div>
+
+
+        
 
     </div>
   )

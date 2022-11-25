@@ -11,7 +11,7 @@ function Partners() {
         <img clasName="people" src={People} alt="" />
     </div>
 
-    <div>
+    <div className='div2'>
     <h2>Os nossos parceiros</h2>
     <p>Para quê trabalhar sozinho quando se pode trabalhar em conjunto e chegar ainda mais longe?
     JobCoach cria parcerias e conecta pessoas para que todos saiam a ganhar.</p>

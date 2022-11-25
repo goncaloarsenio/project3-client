@@ -2,3 +2,38 @@
   text-align: center;
 }
 
+nav{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: baseline;
+	align-content: stretch;
+  padding-left: 10px;
+  padding-right: 10px;
+  height:90px;
+}
+
+.middle-nav{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+}
+
+.middle-nav p{
+  padding:0 8px;
+}
+
+.avatar{
+ padding-top: 15px;
+ height: 45px;
+}
+
+.middle-nav-link{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
