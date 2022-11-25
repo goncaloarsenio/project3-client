@@ -27,11 +27,23 @@ Ao longo das várias etapas vais ter a acesso a cursos, artigos, templates e mui
         <div>
         <img src={CvImg} alt="" className='cvimg' />
         </div>
-
+        <h3 className='h3-cv'>Currículo</h3>
+        <p className='p-cv'>Escolhe o currículo que melhor se adequa à tua área e à empresa a que te queres candidatar.</p>
+        </div>
         </div>
 
 
+        
+        <div className='section4-home'>
+        <div className='section4-home-cm'>
+        <div>
+        <img src={CmImg} alt="" className='cmimg' />
         </div>
+        <h3 className='h3-cm'>Carta de Motivação</h3>
+        <p className='p-cm'>Mostra que queres mesmo este emprego e explica de que forma és a melhor pessoa para o trabalho.</p>
+        </div>
+        </div>
+
     </div>
   )
 }
