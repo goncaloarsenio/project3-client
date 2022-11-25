@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +11,79 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+nav{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: baseline;
+	align-content: stretch;
+  padding-left: 10px;
+  padding-right: 10px;
+  height:90px;
+}
+
+.middle-nav{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+}
+
+.middle-nav p{
+  padding:0 8px;
+}
+
+.avatar{
+ padding-top: 15px;
+ height: 45px;
+}
+
+.middle-nav-link{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.section1-home{
+  padding-top: 20px;
+  background-color: #F4EFE9;
+  width: 100%;
+}
+
+.pcimg{
+  width: 70%;
+}
+
+.section1-h3{
+  color: #373F41;
+}
+
+.section2-p{
+  color: #737B7D;
+}
+
+.section2-h2{
+  color: #E86A50;
+  font-size: 1.5rem;
+}
+
+.section3-home-curriculo{
+  background-color: #F4EFE9;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  margin-left: 20px;
+}
+
+.cvimg{
+  position: relative;
+  width:130px;
+  height: 130px;
+  margin-right: 200px;
+  padding-top: 20px;
 }
