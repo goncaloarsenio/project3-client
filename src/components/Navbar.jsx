@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import JCLogo from "../images/jobcoachlogo.png";
-import Avatar from "../images/avatar.png";
-import Hamburger from "../components/Hamburger.jsx";
 
 function openNav() {
   document.getElementById("myNav").style.width = "100%";
