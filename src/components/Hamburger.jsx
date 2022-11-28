@@ -1,4 +1,4 @@
-import { slide as Menu } from 'react-burger-menu';
+/* import { slide as Menu } from 'react-burger-menu';
 import {Link} from "react-router-dom";
 import JCLogo from "../images/jobcoachlogo.png"
 import Avatar from "../images/avatar.png"
@@ -29,4 +29,4 @@ function Hamburger() {
   
 }
 
-export default Hamburger;
+export default Hamburger; */

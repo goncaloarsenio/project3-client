@@ -13,7 +13,7 @@ function Navbar(){
         </Link>
         </div>
         <div className="middle-nav">
-        <Link className="middle-nav-link">
+        <Link to='/articles' className="middle-nav-link">
             <p>Artigos</p>
         </Link>
         <Link className="middle-nav-link">
