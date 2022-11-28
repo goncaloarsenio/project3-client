@@ -12,15 +12,15 @@ import {useState, useEffect} from 'react'
 
 function Home() {
 
-    const [articles, setArticles] = useState([])
+    const [partners, setPartners] = useState([])
 
 //function to call API
 
-const getArticles = async () => {
+const getPartners = async () => {
   try {
-    const response = await axios.get(`${process.env.REACT_APP_API_URL}/articles`)
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/partners`)
 
-    setArticles(response.data)
+    setPartners(response.data)
     console.log(response.data)
   } catch (error) {
     console.log(error)
@@ -29,7 +29,7 @@ const getArticles = async () => {
 
 //We need to call the function in a specific moment
 useEffect(()=> {
-  getArticles();
+  getPartners();
 },[])
 
 
@@ -129,13 +129,18 @@ Ao longo das várias etapas vais ter a acesso a cursos, artigos, templates e mui
     <p className='section4-p'>JobCoach dá-te acesso a vários recursos para te tornares num expert da procura de trabalho.</p>
 
 
-    {articles.map((article)=>{
+
+
+    {partners.map((partner)=>{
       return(
-        <div key={article._id} className='ArticleCard card'>
-        <h3>{article.name}</h3>
+        <div key={partner._id} className='partnerCard card'>
+        <img src={partner.img} alt="" className='partnerimghome'/>
+        <p>{partner.description}</p>
         </div>
       )
     })}
+  
+
 
     </div>
 

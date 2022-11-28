@@ -127,6 +127,7 @@ padding: 0 40px;
 .recursos-small{
   padding-bottom: 10px;
   padding-top: 10px;
+  margin-bottom: 40px;
 }
 
 .section4-recursos{
@@ -157,6 +158,7 @@ padding: 0 40px;
 .s2-partners-p{
   color:#373F41;
   margin: 0 25px;
+  padding-bottom: 50px;
 }
 
 footer{
@@ -187,4 +189,26 @@ footer{
 .footer-link{
   text-decoration: none;
   color: white;
+}
+
+
+.partnerimghome{
+  width:80px;
+  height: 70px;
+  margin-top: 10px;
+}
+
+.partnerCard{
+  border: 1px solid #E2E5E6;
+  margin: 10px 10px 10px 40px;
+  width: 80%;
+  height: 170px;
+}
+
+.partnerCard p{
+  padding: 0 50px;
+}
+
+p{
+  color: #737B7D
 }
