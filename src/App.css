@@ -2,41 +2,41 @@
   text-align: center;
 }
 
-nav{
+nav {
   display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: baseline;
-	align-content: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+  align-content: stretch;
   padding-left: 10px;
   padding-right: 10px;
-  height:90px;
+  height: 90px;
 }
 
 #people {
   width: 70vw;
 }
 
-.middle-nav{
+.middle-nav {
   display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: center;
-	align-content: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
 }
 
-.middle-nav p{
-  padding:0 8px;
+.middle-nav p {
+  padding: 0 8px;
 }
 
-.avatar{
- padding-top: 15px;
- height: 45px;
+.avatar {
+  padding-top: 15px;
+  height: 45px;
 }
 
-.middle-nav-link{
+.middle-nav-link {
   text-decoration: none;
   color: black;
   font-weight: bold;
@@ -44,4 +44,86 @@ nav{
 
 #x {
   width: 70vw;
+}
+
+.articles-img1 {
+  width: 30vw;
+  height: 30vh;
+  padding-bottom: 50px;
+}
+
+.main-article {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  margin: 20px;
+  width: 90vw;
+  background-color: #f4efe9;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* Responsive Menu */
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #373F41;
+  background-color: rgba(55, 63, 65, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #F4EFE9;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #E86A50;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.hamburguer {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
 }
