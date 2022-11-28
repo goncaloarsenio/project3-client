@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -13,11 +13,33 @@ function EditForm() {
   const navigate = useNavigate();
   const {id} = useParams();
 
+//colocar axios.get aqui
+const getArticle = async () => {
+  try {
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/articles§  /${id}`);
+
+    //response.data = {title, description}
+    setArticle(response.data.article);
+    setName(response.data.name);
+    setIntro(response.data.intro);
+    setImg(response.data.img);
+    setDescription(response.data.description);
+    console.log(response.data);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+useEffect(() => {
+  getArticle();
+}, []);
+
+
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
       const body = { article, name, intro, img, description };
-      await axios.post(`http://localhost:5005/api/articles/${id}`, body, {
+      await axios.put(`http://localhost:5005/api/articles/${id}`, body, {
         headers: {
           Authorization: `Bearer ${getToken}`,
         },
@@ -85,7 +107,7 @@ function EditForm() {
           {" "}
         </textarea>
 
-        <button type="submit">Publicar Artigo</button>
+        <button type="submit">Editar Artigo</button>
       </form>
     </div>
   );
