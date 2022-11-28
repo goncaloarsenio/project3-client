@@ -102,7 +102,7 @@ Ao longo das várias etapas vais ter a acesso a cursos, artigos, templates e mui
     <p className='recursos-small-p'>Palestras informativas e demonstrativas de um determinados tema, dadas por uma entidade especializada na área.</p>
     </div>
 
-    <hr />
+    <hr className='hr1'/>
 
     <div className='recursos-small'>
     <img src={Workshops} alt="" />
@@ -110,7 +110,7 @@ Ao longo das várias etapas vais ter a acesso a cursos, artigos, templates e mui
     <p className='recursos-small-p'>Cursos físicos ou online que envolvem a realização de uma tarefa prática relacionada com o tema lecionado. </p>
     </div>
 
- <hr />
+ <hr className='hr1' />
 
 <div className='recursos-small'>
     <img src={Headphones} alt="" />
