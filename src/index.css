@@ -213,3 +213,24 @@ footer{
 p{
   color: #737B7D
 }
+
+.email-login,
+.password-login{
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: baseline;
+  margin-left: 40px;
+}
+
+.input-login{
+  width: 90%;
+  border-radius: 8px;
+  border: 1px solid #373F41;
+  margin-top: 5px;
+}
+
+.login-button{
+  
+}
