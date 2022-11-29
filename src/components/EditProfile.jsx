@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+/* import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -133,4 +133,4 @@ function EditProfile() {
   )
 }
 
-export default EditProfile
+export default EditProfile */
