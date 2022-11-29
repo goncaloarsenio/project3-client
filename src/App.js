@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import CreateArticle from './pages/CreateArticle.jsx'
+import Profile from './pages/Profile'
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
   <Route path='/signup' element={<Signup/>}/>
   <Route path='/login' element={<Login/>}/>
   <Route path="/create-article" element={<CreateArticle />}></Route>
-  
+  <Route path="/profile/:id" element={<Profile/>}> </Route>
   
   </Routes>
   <Footer/>

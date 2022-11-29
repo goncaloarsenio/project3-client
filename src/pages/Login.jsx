@@ -40,14 +40,29 @@ function Login() {
 
   return (
     <section>
-        <h1>Log In</h1>
+    <div className="updiv-login-signup">
+    <h1>Pronto para entrar na conta JobCoach?</h1>
+    <p>Ao entrares na tua conta tens acesso ao teu progresso, os teus dados, os teus certificados e conteúdo adaptado às tuas preferências!</p>
+    </div>
+        <h1>Entrar na minha conta</h1>
       <form onSubmit={handleLoginSubmit} className="loginform">
-        <label>Email:</label>
-        <input type="email" name="email" value={email} onChange={handleEmail} />
-        <label>Password:</label>
-        <input type="password" name="password" value={password} onChange={handlePassword} />
-        <button type="submit">Entrar</button>
-        <button>Ainda não tenho conta</button>
+
+      <div className="email-login">
+        <label>Email</label>
+        <input type="email" name="email" value={email} onChange={handleEmail} className="input-login" />
+        </div>
+
+        <br />
+
+        <div className="password-login">
+        <label>Password</label>
+        <input type="password" name="password" value={password} onChange={handlePassword} className="input-login"/>
+        </div>
+
+        
+        <button type="submit" className="login-button">Entrar</button>
+        <button className="noacc-button">Ainda não tenho conta</button>
+
       </form>
       {errorMessage && <p className="error-message">{errorMessage}</p>}
 
