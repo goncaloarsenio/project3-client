@@ -53,25 +53,6 @@ function Article() {
 
   return (
     <div>
- 
-  {articles.map(article => {
-    return(
-      <div className="articleOne">
-      <img className="img2" src={article.img} alt="" />
-      <div className="articleOneText">
-        <h4 className="cartaApresentacao">{article.intro}</h4>
-        <Link className="articleTitle" to="/">
-          <h2>{article.name}</h2>
-        </Link>
-        <p>
-         {article.description}
-        </p>
-
-        <button onClick={() => addFavorite(article._id)}>Like</button>
-      </div>
-    </div>
-    )
-  })}
 
       <div class="main-article">
         <img className="articles-img1" src={Image} alt="" />
@@ -86,6 +67,26 @@ function Article() {
           </Link>
         </div>
       </div>
+
+      {articles.map(article => {
+    return(
+      <div className="articleOne">
+      <img className="img2" src={article.img} alt="" />
+      <div className="articleOneText">
+        <h4 className="cartaApresentacao">{article.intro}</h4>
+        <Link className="articleTitle" to="/edit-article">
+          <h2>{article.name}</h2>
+        </Link>
+        <p>
+         {article.description}
+        </p>
+
+        <button onClick={() => addFavorite(article._id)}>Like</button>
+      </div>
+    </div>
+    )
+  })}
+
       <div id="CartaMotivacao">
         <div className="articleOne">
           <img className="img2" src={Image2} alt="" />
