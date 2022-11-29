@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import { AuthContext } from "../contexts/auth.context";
+import { useContext } from "react";
 
 function EditProfile() {
   const [email, setEmail] = useState("");
@@ -15,6 +17,7 @@ function EditProfile() {
   const [interestAreas, setInterestAreas] = useState("");
   const [interests, setInterests] = useState("");
   const [description, setDescription] = useState("");
+  const { logout } = useContext(AuthContext);
 
   const getToken = localStorage.getItem("authToken");
   const navigate = useNavigate();
@@ -72,153 +75,178 @@ function EditProfile() {
         },
       });
 
-      navigate("/");
+      navigate("/articles");
     } catch (error) {
       console.log(error);
     }
   };
 
+  const deleteProfile = async () => {
+    try {
+      await axios.delete(`http://localhost:5005/api/profile/${id}`, null, {
+        headers: {
+          Authorization: `Bearer ${getToken}`,
+        },
+      });
+      logout();
+      navigate("/login");
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          name="email"
-          value={email}
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-        />
+        <div className="edit-profile">
+          <label htmlFor="email">Email</label>
+          <input
+            className=""
+            type="email"
+            name="email"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+          />
 
-        <label htmlFor="firstName">First Name</label>
-        <input
-          type="text"
-          name="firstName"
-          value={firstName}
-          onChange={(e) => {
-            setFirstName(e.target.value);
-          }}
-        />
+          <label htmlFor="firstName">Nome</label>
+          <input
+            type="text"
+            name="firstName"
+            value={firstName}
+            onChange={(e) => {
+              setFirstName(e.target.value);
+            }}
+          />
 
-        <label htmlFor="lastName">Last Name</label>
-        <input
-          type="text"
-          name="lastName"
-          value={lastName}
-          onChange={(e) => {
-            setLastName(e.target.value);
-          }}
-        />
+          <label htmlFor="lastName">Apelido</label>
+          <input
+            type="text"
+            name="lastName"
+            value={lastName}
+            onChange={(e) => {
+              setLastName(e.target.value);
+            }}
+          />
 
-        {/*  <label htmlFor="img">Img URL</label>
-        <input
-          type="text"
-          name="img"
-          value={img}
-          onChange={(e) => {
-            setImg(e.target.value);
-          }}
-        /> */}
+          <label htmlFor="description">Descrição</label>
+          <textarea
+            name="description"
+            value={description}
+            cols="30"
+            rows="10"
+            onChange={(e) => {
+              setDescription(e.target.value);
+            }}
+          >
+            {" "}
+          </textarea>
 
-        <label htmlFor="description">Descrição</label>
-        <textarea
-          name="description"
-          value={description}
-          cols="30"
-          rows="10"
-          onChange={(e) => {
-            setDescription(e.target.value);
-          }}
-        >
-          {" "}
-        </textarea>
+          <label htmlFor="genre">Género</label>
+          <select
+            name="genre"
+            onClick={(e) => {
+              setGenre(e.target.value);
+            }}
+          >
+            <option value="Masculino" selected={genre === "Masculino"}>
+              Masculino
+            </option>
+            <option value="Feminino" selected={genre === "Feminino"}>
+              Feminino
+            </option>
+          </select>
 
-        <label htmlFor="genre">Género</label>
-        <select
-          name="genre"
-          onClick={(e) => {
-            setGenre(e.target.value);
-          }}
-        >
-          <option value="Masculino" selected={genre === 'Masculino'}>Masculino</option>
-          <option value="Feminino" selected={genre === 'Feminino'} >Feminino</option>
-        </select>
+          <label htmlFor="birthdayDate">Data de Nascimento</label>
+          <input
+            type="date"
+            name="birthdayDate"
+            value={birthdayDate.toLocaleString().slice(0, 10)}
+            onChange={(e) => {
+              setBirthdayDate(e.target.value);
+            }}
+          />
 
-        <label htmlFor="birthdayDate">Data de Nascimento</label>
-        <input
-          type="date"
-          name="birthdayDate"
-          value={birthdayDate.toLocaleString().slice(0,10)}
-          onChange={(e) => {
-            setBirthdayDate(e.target.value);
-          }}
-        />
+          <label htmlFor="phoneNumber">Telemovel</label>
+          <input
+            type="number"
+            name="phoneNumber"
+            value={phoneNumber}
+            onChange={(e) => {
+              setPhoneNumber(e.target.value);
+            }}
+          />
 
-        <label htmlFor="phoneNumber">Telemovel</label>
-        <input
-          type="number"
-          name="phoneNumber"
-          value={phoneNumber}
-          onChange={(e) => {
-            setPhoneNumber(e.target.value);
-          }}
-        />
+          <label htmlFor="residenceArea">Area de Residência</label>
+          <input
+            type="text"
+            name="residenceArea"
+            value={residenceArea}
+            onChange={(e) => {
+              setResidenceArea(e.target.value);
+            }}
+          />
 
-        <label htmlFor="residenceArea">Area de Residência</label>
-        <input
-          type="text"
-          name="residenceArea"
-          value={residenceArea}
-          onChange={(e) => {
-            setResidenceArea(e.target.value);
-          }}
-        />
+          <label htmlFor="formationDegree">Grau de Formação</label>
+          <select
+            name="formationDegree"
+            onClick={(e) => {
+              setFormationDegree(e.target.value);
+            }}
+          >
+            <option
+              value="Licenciatura"
+              selected={formationDegree === "Licenciatura"}
+            >
+              Licenciatura
+            </option>
+            <option value="Mestrado" selected={formationDegree === "Mestrado"}>
+              Mestrado
+            </option>
+            <option
+              value="Doutorado"
+              selected={formationDegree === "Doutorado"}
+            >
+              Doutorado
+            </option>
+          </select>
 
-        <label htmlFor="formationDegree">Grau de Formação</label>
-        <select
-          name="formationDegree"
-          onClick={(e) => {
-            setFormationDegree(e.target.value);
-          }}
-        >
-          <option value="Licenciatura" selected={formationDegree === 'Licenciatura'}>Licenciatura</option>
-          <option value="Mestrado" selected={formationDegree === 'Mestrado'}>Mestrado</option>
-          <option value="Doutorado" selected={formationDegree === 'Doutorado'}>Doutorado</option>
-        </select>
+          <label htmlFor="formationArea">Area de Formação</label>
+          <input
+            type="text"
+            name="formationArea"
+            value={formationArea}
+            onChange={(e) => {
+              setFormationArea(e.target.value);
+            }}
+          />
 
-        <label htmlFor="formationArea">Area de Formação</label>
-        <input
-          type="text"
-          name="formationArea"
-          value={formationArea}
-          onChange={(e) => {
-            setFormationArea(e.target.value);
-          }}
-        />
+          <label htmlFor="interests">Interesses</label>
+          <input
+            type="text"
+            name="interests"
+            value={interests}
+            onChange={(e) => {
+              setInterests(e.target.value);
+            }}
+          />
 
-        <label htmlFor="interests">Interesses</label>
-        <input
-          type="text"
-          name="interests"
-          value={interests}
-          onChange={(e) => {
-            setInterests(e.target.value);
-          }}
-        />
+          <label htmlFor="interestAreas">Areas de Interesse</label>
+          <input
+            type="text"
+            name="interestAreas"
+            value={interestAreas}
+            onChange={(e) => {
+              setInterestAreas(e.target.value);
+            }}
+          />
 
-        <label htmlFor="interestAreas">Areas de Interesse</label>
-        <input
-          type="text"
-          name="interestAreas"
-          value={interestAreas}
-          onChange={(e) => {
-            setInterestAreas(e.target.value);
-          }}
-        />
-
-        <button type="submit">Guardar</button>
+          <button type="submit">Guardar</button>
+        </div>
       </form>
+
+      <button onClick={deleteProfile}>Delete Profile</button>
+      
     </div>
   );
 }

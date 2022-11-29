@@ -59,7 +59,7 @@ Ao longo das várias etapas vais ter a acesso a cursos, artigos, templates e mui
 
         <div className='section3-home-curriculo'>
         <div>
-        <img src={CvImg} alt="" className='cvimg' />
+        <img src={CvImg} alt="" className='curriimg' />
         </div>
         <h3 className='h3-cv'>Currículo</h3>
         <p className='p-cv'>Escolhe o currículo que melhor se adequa à tua área e à empresa a que te queres candidatar.</p>
@@ -68,7 +68,7 @@ Ao longo das várias etapas vais ter a acesso a cursos, artigos, templates e mui
 
 
 
-        <div className='section3-home-cm'>
+        <div className='section3-home-curriculo'>
         <div>
         <img src={CmImg} alt="" className='cmimg' />
         </div>
@@ -80,10 +80,10 @@ Ao longo das várias etapas vais ter a acesso a cursos, artigos, templates e mui
 
         <div className='section3-home-curriculo'>
         <div>
-        <img src={InterviewImg} alt="" className='cvimg' />
+        <img src={InterviewImg} alt="" className='entrevistaimg' />
         </div>
-        <h3 className='h3-cv'>Entrevistas</h3>
-        <p className='p-cv'>Prepara-te para a tua entrevista presencial ou online.</p>
+        <h3 className='h3-en'>Entrevistas</h3>
+        <p className='p-en'>Prepara-te para a tua entrevista presencial ou online.</p>
         </div>
 
 </div>

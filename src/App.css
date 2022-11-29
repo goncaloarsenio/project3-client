@@ -78,7 +78,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #373F41;
+  background-color: #373f41;
   background-color: rgba(55, 63, 65, 0.9);
   overflow-x: hidden;
   transition: 0.5s;
@@ -96,14 +96,14 @@ body {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
-  color: #F4EFE9;
+  color: #f4efe9;
   display: block;
   transition: 0.3s;
 }
 
 .overlay a:hover,
 .overlay a:focus {
-  color: #E86A50;
+  color: #e86a50;
 }
 
 .overlay .closebtn {
@@ -118,21 +118,21 @@ body {
   cursor: pointer;
 }
 
-.createButton{
-background-color: #E86A50;
-border:none;
-color:#F4EFE9;
-height: 40px;
-border-radius: 10px;
-margin-top: 10px;
+.createButton {
+  background-color: #e86a50;
+  border: none;
+  color: #f4efe9;
+  height: 40px;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
-.img2{
-  width:250px;
+.img2 {
+  width: 250px;
   height: 200px;
 }
 
-.articleOne{
+.articleOne {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -140,26 +140,26 @@ margin-top: 10px;
   margin: 20px;
 }
 
-.cartaApresentacao{
-  color:#E86A50
+.cartaApresentacao {
+  color: #e86a50;
 }
 
-.articleTitle{
+.articleTitle {
   color: black;
   text-decoration: none;
 }
 
-.articleTitle:Hover{
-  color:#E86A50
+.articleTitle:hover {
+  color: #e86a50;
 }
 
-.articleTwo{
-  background-color: #F4EFE9;
+.articleTwo {
+  background-color: #f4efe9;
 }
 
-.img6-9{
+.img6-9 {
   padding-top: 50px;
-  width:250px;
+  width: 250px;
   height: 200px;
 }
 
@@ -172,4 +172,116 @@ margin-top: 10px;
     top: 15px;
     right: 35px;
   }
+}
+
+/* -------------------------------------------- signup ------------------------------------------------ */
+
+.signupform {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 4vh;
+}
+
+.input {
+  border-radius: 20px;
+  width: 80vw;
+  height: 5vh;
+  margin-top: 2vw;
+  margin-bottom: 6vw;
+  border: 1px solid #373f41;
+}
+
+.signupWord {
+  color: #e86a50;
+}
+
+.signupCredentials {
+  color: #373f41;
+}
+
+.redirectLink {
+  text-decoration: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #e86a50;
+}
+
+.signupButtons {
+  display: flex;
+  flex-direction: row;
+}
+
+.registerButton {
+  background-color: #e86a50;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  width: 30vw;
+  margin-right: 4vw;
+}
+
+.alreadyButton {
+  background-color: white;
+  color: #e86a50;
+  border: 1px solid #e86a50;
+  border-radius: 20px;
+  width: 40vw;
+  height: 6vh;
+}
+
+.signupLoginHeader {
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url("./images/Vector\ 42.svg");
+  color:#373f41;
+  padding-bottom: 20px;
+}
+
+
+/* --------------------------------------Login-------------------------- */
+
+.loginButtons{
+  display: flex;
+  flex-direction: row;
+  padding-left: 9vw;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.entryButton{
+  background-color: #e86a50;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  width: 35vw;
+  height: 50px;
+  margin-right: 4vw;
+  font-size: 20px;
+}
+
+.notYetButton{
+  background-color: white;
+  color: #e86a50;
+  border: 1px solid #e86a50;
+  border-radius: 20px;
+  width: 45vw;
+  height: 6vh;
+  font-size: 16px;
+}
+
+.loginWord{
+  color:#e86a50;
+}
+
+/* --------------------------Edit Profile---------------------------- */
+
+.edit-profile{
+  display: flex;
+  flex-direction: column;
+  
 }
