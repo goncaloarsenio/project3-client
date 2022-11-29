@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import Image from "../images/image81.png";
 import Image2 from "../images/luis-villasmil-mlVbMbxfWI4-unsplash.png";
 import Image3 from "../images/andrew-neel-cckf4TsHAuw-unsplash.png";
@@ -12,13 +12,67 @@ import Image10 from "../images/neonbrand-87EqZAWN-v8-unsplash.png";
 import Image11 from "../images/campaign-creators-qCi_MzVODoU-unsplash.png";
 import Image12 from "../images/charles-deluvio-rRWiVQzLm7k-unsplash.png";
 import Image13 from "../images/leon-0K7GgiA8lVE-unsplash.png";
-
 import { Link } from "react-router-dom";
+import axios from "axios";
+
 /* import CreateForm from '../components/CreateForm' */
 
 function Article() {
+  const [articles, setArticles] = useState([]);
+
+  const getArticles = async () => {
+    try {
+      const response = await axios.get(
+        `${process.env.REACT_APP_API_URL}/articles`
+      );
+      setArticles(response.data);
+      console.log(response.data)
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getArticles();
+  }, []);
+
+  //adicionar favoritos
+ const addFavorite = async (id) => {
+  try {
+    const storedToken = localStorage.getItem('authToken');
+    await axios.put(`${process.env.REACT_APP_API_URL}/favorites/${id}`, null, {
+      headers: { Authorization: `Bearer ${storedToken}` }});
+    
+  } catch (error) {
+    console.log(error)
+    
+  }
+ }
+
+
+
   return (
     <div>
+ 
+  {articles.map(article => {
+    return(
+      <div className="articleOne">
+      <img className="img2" src={article.img} alt="" />
+      <div className="articleOneText">
+        <h4 className="cartaApresentacao">{article.intro}</h4>
+        <Link className="articleTitle" to="/">
+          <h2>{article.name}</h2>
+        </Link>
+        <p>
+         {article.description}
+        </p>
+
+        <button onClick={() => addFavorite(article._id)}>Like</button>
+      </div>
+    </div>
+    )
+  })}
+
       <div class="main-article">
         <img className="articles-img1" src={Image} alt="" />
         <div>
