@@ -7,6 +7,7 @@ import Article from './pages/Article';
 import Footer from './components/Footer';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
+import CreateArticle from './pages/CreateArticle.jsx'
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
   <Route path="/articles" element={<Article/>}/>
   <Route path='/signup' element={<Signup/>}/>
   <Route path='/login' element={<Login/>}/>
+  <Route path="/create-article" element={<CreateArticle />}></Route>
+  
   
   </Routes>
   <Footer/>
