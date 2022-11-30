@@ -1,7 +1,7 @@
 import React from 'react'
-import Edit from '../components/EditForm'
+import EditForm from '../components/EditForm'
 
-function EditForm() {
+function Edit() {
   return (
     <div>
         <EditForm />
@@ -9,4 +9,4 @@ function EditForm() {
   )
 }
 
-export default EditForm
+export default Edit

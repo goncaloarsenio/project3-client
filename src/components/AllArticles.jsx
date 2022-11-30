@@ -12,14 +12,14 @@ import Image10 from "../images/neonbrand-87EqZAWN-v8-unsplash.png";
 import Image11 from "../images/campaign-creators-qCi_MzVODoU-unsplash.png";
 import Image12 from "../images/charles-deluvio-rRWiVQzLm7k-unsplash.png";
 import Image13 from "../images/leon-0K7GgiA8lVE-unsplash.png";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
 /* import CreateForm from '../components/CreateForm' */
 
 function Article() {
   const [articles, setArticles] = useState([]);
-
+  const {id} = useParams();
   const getArticles = async () => {
     try {
       const response = await axios.get(
@@ -53,25 +53,6 @@ function Article() {
 
   return (
     <div>
- 
-  {articles.map(article => {
-    return(
-      <div className="articleOne">
-      <img className="img2" src={article.img} alt="" />
-      <div className="articleOneText">
-        <h4 className="cartaApresentacao">{article.intro}</h4>
-        <Link className="articleTitle" to="/">
-          <h2>{article.name}</h2>
-        </Link>
-        <p>
-         {article.description}
-        </p>
-
-        <button onClick={() => addFavorite(article._id)}>Like</button>
-      </div>
-    </div>
-    )
-  })}
 
       <div class="main-article">
         <img className="articles-img1" src={Image} alt="" />
@@ -86,6 +67,26 @@ function Article() {
           </Link>
         </div>
       </div>
+
+      {articles.map(article => {
+    return(
+      <div className="articleOne">
+      <img className="img2" src={article.img} alt="" />
+      <div className="articleOneText">
+        <h4 className="cartaApresentacao">{article.intro}</h4>
+        <Link className="articleTitle" to={`/edit-article/${article._id}`}>
+          <h2>{article.name}</h2>
+        </Link>
+        <p>
+         {article.description}
+        </p>
+
+        <button onClick={() => addFavorite(article._id)}>Like</button>
+      </div>
+    </div>
+    )
+  })}
+
       <div id="CartaMotivacao">
         <div className="articleOne">
           <img className="img2" src={Image2} alt="" />

@@ -41,63 +41,73 @@ code {
 }
 
 .section3-home-curriculo{
-  background-color: #F4EFE9;
-  border-radius: 50%;
-  width: 250px;
-  height: 250px;
-  margin-left: 20px;
-  box-shadow: -10px -3px 20px rgba(0, 0, 0, 0.12);
+  /* background-color: #F4EFE9; */
+  background-image: url('./images/Vector\ 10.svg');
+  border-radius: 70%;
+  width: 340px;
+  height: 300px;
+  margin-left: 10px;
+ /*  box-shadow: -10px -3px 20px rgba(0, 0, 0, 0.12); */
   margin-bottom: 30px;
 }
 
-.cvimg{
-  position: absolute;
+
+.curriimg{
   width:130px;
-  height: 130px;
-  margin-right: 200px;
-  padding-top: 20px;
+  height: 110px;
+  padding-left: 140px;
 }
 
 .h3-cv{
-  padding-top: 70px;
-  padding-right: 80px;
+  padding-right: 70px;
   color: #373F41;
+  font-size: 20px;
 }
 
 .p-cv{
-  padding-top: 10px;
-  width: 200px;
-  padding-left: 20px;
+  width: 210px;
+  padding-left: 85px;
   color: #373F41;
+  text-align: left;
 }
 
-.section3-home-cm{
-  background-color: #F4EFE9;
-  border-radius: 50%;
-  width: 250px;
-  height: 250px;
-  margin-left: 120px;
-  box-shadow: -10px -3px 20px rgba(0, 0, 0, 0.12);
-  margin-bottom: 30px;
-}
 
 .cmimg{
   position: absolute;
   width:130px;
   height: 130px;
+  margin-left: 25px;
 }
 
 .h3-cm{
-  padding-top: 60px;
-  padding-right: 80px;
+  padding-top: 145px;
+  /* padding-left: 0px; */
   color: #373F41;
 }
 
 .p-cm{
-  width: 180px;
-  padding-left: 35px;
+  width: 220px;
+  padding-left: 85px;
   color: #373F41;
+  text-align:left
 }
+
+.entrevistaimg{
+
+  width:130px;
+  height: 130px;
+  padding-left: 140px;
+}
+
+.h3-en{
+padding-right: 40px;
+}
+.p-en{
+  text-align: left;
+  width: 180px;
+  margin-left: 100px;
+}
+
 
 .section4-home{
   padding-top: 10px;
