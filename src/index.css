@@ -17,8 +17,11 @@ code {
 
 .section1-home{
   padding-top: 20px;
-  background-color: #F4EFE9;
+/*   background-color: #F4EFE9; */
   width: 100%;
+  background-image: url('./images/Vector\ 42.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .pcimg{
@@ -149,7 +152,9 @@ padding: 0 40px;
 }
 
 .section1-partners{
-  background-color: #F4EFE9;
+  background-image: url('./images/Vector\ 42.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .s1-partners-h1{

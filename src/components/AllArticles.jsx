@@ -70,7 +70,7 @@ function Article() {
 
       {articles.map(article => {
     return(
-      <div className="articleOne">
+      <div>
       <img className="img2" src={article.img} alt="" />
       <div className="articleOneText">
         <h4 className="cartaApresentacao">{article.intro}</h4>
@@ -92,7 +92,7 @@ function Article() {
           <img className="img2" src={Image2} alt="" />
           <div className="articleOneText">
             <h4 className="cartaApresentacao">Carta de Apresentação</h4>
-            <Link className="articleTitle" to="/">
+            <Link className="articleTitle" to="/ex-article">
               <h2>
                 Todos os pontos cruciais para a Carta de Apresentação ideal.
               </h2>
@@ -108,7 +108,7 @@ function Article() {
           <img className="img2" src={Image3} alt="" />
           <div className="articleOneText">
             <h4 className="cartaApresentacao">Carta de Apresentação</h4>
-            <Link className="articleTitle" to="/">
+            <Link className="articleTitle" to="/ex-article">
               <h2>Dicas úteis para escrever uma Carta de Apresentação</h2>
             </Link>
             <p>
@@ -122,7 +122,7 @@ function Article() {
           <img className="img2" src={Image4} alt="" />
           <div className="articleOneText">
             <h4 className="cartaApresentacao">Carta de Apresentação</h4>
-            <Link className="articleTitle" to="/">
+            <Link className="articleTitle" to="/ex-article">
               <h2>
                 Destaca-te com palavras-chave na tua Carta de Apresentação
               </h2>
@@ -138,7 +138,7 @@ function Article() {
           <img className="img2" src={Image5} alt="" />
           <div className="articleOneText">
             <h4 className="cartaApresentacao">Carta de Apresentação</h4>
-            <Link className="articleTitle" to="/">
+            <Link className="articleTitle" to="/ex-article">
               <h2>O Primeiro Contacto</h2>
             </Link>
             <p>
@@ -154,7 +154,7 @@ function Article() {
             <img className="img6-9" src={Image6} alt="" />
             <div className="articleOneText">
               <h4 className="cartaApresentacao">Currículo</h4>
-              <Link className="articleTitle" to="/">
+              <Link className="articleTitle" to="/ex-article">
                 <h2>
                   Tudo o que precisas de saber para criar um CV sem erros.
                 </h2>
@@ -170,7 +170,7 @@ function Article() {
             <img className="img6-9" src={Image7} alt="" />
             <div className="articleOneText">
               <h4 className="cartaApresentacao">Currículo</h4>
-              <Link className="articleTitle" to="/">
+              <Link className="articleTitle" to="/ex-article">
                 <h2>Soft Skills para CV’s</h2>
               </Link>
               <p>
@@ -184,7 +184,7 @@ function Article() {
             <img className="img6-9" src={Image8} alt="" />
             <div className="articleOneText">
               <h4 className="cartaApresentacao">Currículo</h4>
-              <Link className="articleTitle" to="/">
+              <Link className="articleTitle" to="/ex-article">
                 <h2>Como Fazer um Curriculo Criativo</h2>
               </Link>
               <p>
@@ -198,7 +198,7 @@ function Article() {
             <img className="img6-9" src={Image9} alt="" />
             <div className="articleOneText">
               <h4 className="cartaApresentacao">Currículo</h4>
-              <Link className="articleTitle" to="/">
+              <Link className="articleTitle" to="/ex-article">
                 <h2>Destaca-te da Concorrência</h2>
               </Link>
               <p>
@@ -214,7 +214,7 @@ function Article() {
           <img className="img2" src={Image10} alt="" />
           <div className="articleOneText">
             <h4 className="cartaApresentacao">Entrevista</h4>
-            <Link className="articleTitle" to="/">
+            <Link className="articleTitle" to="/ex-article">
               <h2>Entrevista de Emprego, passo a passo para impressionar</h2>
             </Link>
             <p>
@@ -229,7 +229,7 @@ function Article() {
           <img className="img2" src={Image11} alt="" />
           <div className="articleOneText">
             <h4 className="cartaApresentacao">Entrevista</h4>
-            <Link className="articleTitle" to="/">
+            <Link className="articleTitle" to="/ex-article">
               <h2>Primeira impressão que fica</h2>
             </Link>
             <p>
@@ -243,7 +243,7 @@ function Article() {
           <img className="img2" src={Image12} alt="" />
           <div className="articleOneText">
             <h4 className="cartaApresentacao">Entrevista</h4>
-            <Link className="articleTitle" to="/">
+            <Link className="articleTitle" to="/ex-article">
               <h2>A essência da entrevista é seres um honesto</h2>
             </Link>
             <p>
@@ -257,7 +257,7 @@ function Article() {
           <img className="img2" src={Image13} alt="" />
           <div className="articleOneText">
             <h4 className="cartaApresentacao">Entrevista</h4>
-            <Link className="articleTitle" to="/">
+            <Link className="articleTitle" to="/ex-article">
               <h2>Como se preparar para uma entrevista de emprego</h2>
             </Link>
             <p>

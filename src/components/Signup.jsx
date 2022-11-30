@@ -29,7 +29,7 @@ function Signup(props) {
     }
   };
   return (
-    <section>
+    <section className="auth-body">
       <div className="signupLoginHeader">
         <h1> Pronto para criar a tua conta JobCoach?</h1>
         <p>
