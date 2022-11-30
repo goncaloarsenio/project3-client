@@ -37,6 +37,12 @@ function CourseDetails() {
               <div className='course-type' style={{backgroundColor: course.color}}> <b>{course.type}</b> </div>
               <h2 style={{color: course.color}}>{course.company}</h2>
               <h1 className='course-name'>{course.name}</h1>
+              <div>
+              <img src={course.img} alt="" />
+              <h4>{course.person}</h4>
+              <p>{course.occupation}</p>
+              </div>
+              <br />
               <p>{course.duration}</p>
               <br />
               <p className='course-description'>{course.description}</p>
