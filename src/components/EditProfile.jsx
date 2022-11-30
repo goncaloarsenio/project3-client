@@ -83,7 +83,7 @@ function EditProfile() {
 
   const deleteProfile = async () => {
     try {
-      await axios.delete(`http://localhost:5005/api/profile/${id}`, null, {
+      await axios.delete(`${process.env.REACT_APP_API_URL}/profile/${id}`, null, {
         headers: {
           Authorization: `Bearer ${getToken}`,
         },
