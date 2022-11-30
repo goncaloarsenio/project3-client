@@ -39,7 +39,7 @@ function Login() {
 
 
   return (
-    <section>
+    <section className="auth-body">
     <div className="signupLoginHeader">
     <h1 >Pronto para entrar na conta JobCoach?</h1>
     <p>Ao entrares na tua conta tens acesso ao teu progresso, os teus dados, os teus certificados e conteúdo adaptado às tuas preferências!</p>

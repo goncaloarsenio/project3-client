@@ -96,11 +96,13 @@ function EditProfile() {
   };
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <div className="edit-profile">
-          <label htmlFor="email">Email</label>
+      <div className="div-profile">
+        <form className="form" onSubmit={handleSubmit}>
+          <label class="edit-cat" htmlFor="email">
+            Email
+          </label>
           <input
-            className=""
+            className="input-edit"
             type="email"
             name="email"
             value={email}
@@ -109,8 +111,11 @@ function EditProfile() {
             }}
           />
 
-          <label htmlFor="firstName">Nome</label>
+          <label class="edit-cat" htmlFor="firstName">
+            Nome
+          </label>
           <input
+            className="input-edit"
             type="text"
             name="firstName"
             value={firstName}
@@ -119,8 +124,11 @@ function EditProfile() {
             }}
           />
 
-          <label htmlFor="lastName">Apelido</label>
+          <label class="edit-cat" htmlFor="lastName">
+            Apelido
+          </label>
           <input
+            className="input-edit"
             type="text"
             name="lastName"
             value={lastName}
@@ -129,8 +137,11 @@ function EditProfile() {
             }}
           />
 
-          <label htmlFor="description">Descrição</label>
+          <label class="edit-cat" htmlFor="description">
+            Descrição
+          </label>
           <textarea
+            className="input-edit"
             name="description"
             value={description}
             cols="30"
@@ -142,8 +153,11 @@ function EditProfile() {
             {" "}
           </textarea>
 
-          <label htmlFor="genre">Género</label>
+          <label class="edit-cat" htmlFor="genre">
+            Género
+          </label>
           <select
+            className="input-edit"
             name="genre"
             onClick={(e) => {
               setGenre(e.target.value);
@@ -157,8 +171,11 @@ function EditProfile() {
             </option>
           </select>
 
-          <label htmlFor="birthdayDate">Data de Nascimento</label>
+          <label class="edit-cat" htmlFor="birthdayDate">
+            Data de Nascimento
+          </label>
           <input
+            className="input-edit"
             type="date"
             name="birthdayDate"
             value={birthdayDate.toLocaleString().slice(0, 10)}
@@ -167,8 +184,11 @@ function EditProfile() {
             }}
           />
 
-          <label htmlFor="phoneNumber">Telemovel</label>
+          <label class="edit-cat" htmlFor="phoneNumber">
+            Telemovel
+          </label>
           <input
+            className="input-edit"
             type="number"
             name="phoneNumber"
             value={phoneNumber}
@@ -177,8 +197,11 @@ function EditProfile() {
             }}
           />
 
-          <label htmlFor="residenceArea">Area de Residência</label>
+          <label class="edit-cat" htmlFor="residenceArea">
+            Area de Residência
+          </label>
           <input
+            className="input-edit"
             type="text"
             name="residenceArea"
             value={residenceArea}
@@ -187,8 +210,11 @@ function EditProfile() {
             }}
           />
 
-          <label htmlFor="formationDegree">Grau de Formação</label>
+          <label class="edit-cat" htmlFor="formationDegree">
+            Grau de Formação
+          </label>
           <select
+            className="input-edit"
             name="formationDegree"
             onClick={(e) => {
               setFormationDegree(e.target.value);
@@ -211,8 +237,11 @@ function EditProfile() {
             </option>
           </select>
 
-          <label htmlFor="formationArea">Area de Formação</label>
+          <label class="edit-cat" htmlFor="formationArea">
+            Area de Formação
+          </label>
           <input
+            className="input-edit"
             type="text"
             name="formationArea"
             value={formationArea}
@@ -221,8 +250,11 @@ function EditProfile() {
             }}
           />
 
-          <label htmlFor="interests">Interesses</label>
+          <label class="edit-cat" htmlFor="interests">
+            Interesses
+          </label>
           <input
+            className="input-edit"
             type="text"
             name="interests"
             value={interests}
@@ -231,8 +263,11 @@ function EditProfile() {
             }}
           />
 
-          <label htmlFor="interestAreas">Areas de Interesse</label>
+          <label class="edit-cat" htmlFor="interestAreas">
+            Areas de Interesse
+          </label>
           <input
+            className="input-edit"
             type="text"
             name="interestAreas"
             value={interestAreas}
@@ -240,13 +275,18 @@ function EditProfile() {
               setInterestAreas(e.target.value);
             }}
           />
+<div className="progile-buttons">
+          <button className="edit-button" type="submit">
+            Guardar
+          </button>
 
-          <button type="submit">Guardar</button>
-        </div>
-      </form>
+        <button className="edit-button" onClick={deleteProfile}>
+          Delete Profile
+        </button>
+</div>
+        </form>
 
-      <button onClick={deleteProfile}>Delete Profile</button>
-      
+      </div>
     </div>
   );
 }

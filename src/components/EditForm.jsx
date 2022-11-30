@@ -55,62 +55,69 @@ function EditForm() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="article">Categoria</label>
-        <input
-          type="text"
-          name="article"
-          value={article}
-          onChange={(e) => {
-            setArticle(e.target.value);
-          }}
-        />
+      <div className="edit-form">
+        <form  className="form" onSubmit={handleSubmit}>
+          <label className="edit-cat" htmlFor="article">Categoria</label>
+          <input
+           className="input-edit"
+            type="text"
+            name="article"
+            value={article}
+            onChange={(e) => {
+              setArticle(e.target.value);
+            }}
+          />
 
-        <label htmlFor="name">Titulo</label>
-        <input
-          type="text"
-          name="name"
-          value={name}
-          onChange={(e) => {
-            setName(e.target.value);
-          }}
-        />
+          <label className="edit-cat" htmlFor="name">Titulo</label>
+          <input
+           className="input-edit"
+            type="text"
+            name="name"
+            value={name}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+          />
 
-        <label htmlFor="intro">Introdução</label>
-        <input
-          type="text"
-          name="intro"
-          value={intro}
-          onChange={(e) => {
-            setIntro(e.target.value);
-          }}
-        />
+          <label className="edit-cat" htmlFor="intro">Introdução</label>
+          <input
+           className="input-edit"
+            type="text"
+            name="intro"
+            value={intro}
+            onChange={(e) => {
+              setIntro(e.target.value);
+            }}
+          />
 
-        <label htmlFor="img">Img URL</label>
-        <input
-          type="text"
-          name="img"
-          value={img}
-          onChange={(e) => {
-            setImg(e.target.value);
-          }}
-        />
+          <label className="edit-cat" htmlFor="img">Img URL</label>
+          <input
+           className="input-edit"
+            type="text"
+            name="img"
+            value={img}
+            onChange={(e) => {
+              setImg(e.target.value);
+            }}
+          />
 
-        <label htmlFor="description">Descrição</label>
-        <textarea
-          name="description"
-          value={description}
-          cols="30"
-          rows="10"
-          onChange={(e) => {
-            setDescription(e.target.value);
-          }}
-        >
-          {" "}
-        </textarea>
+          <label className="edit-cat" htmlFor="description">Descrição</label>
+          <textarea
+          className="input-edit"
+            name="description"
+            value={description}
+            cols="30"
+            rows="10"
+            onChange={(e) => {
+              setDescription(e.target.value);
+            }}
+          >
+            {" "}
+          </textarea>
 
-        <button type="submit">Editar Artigo</button>
-      </form>
+          <button  className="form-button" type="submit">Editar Artigo</button>
+        </form>
+      </div>
     </div>
   );
 }

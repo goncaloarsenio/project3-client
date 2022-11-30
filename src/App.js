@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import CreateArticle from "./pages/CreateArticle.jsx";
 import EditArticle from "./pages/EditArticle.jsx";
 import Profile from './pages/Profile'
+import ExampleArticle from "./components/ExampleArticle";
 import Courses from "./pages/Courses";
 import CourseDetails from "./pages/CourseDetails";
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/create-article" element={<CreateArticle />}></Route>
         <Route path="/edit-article/:id" element={<EditArticle />}></Route>
         <Route path="/profile/:id" element={<Profile/>}> </Route>
+        <Route path="/ex-article" element={<ExampleArticle />}></Route>
         <Route path="/course/:id" element={<CourseDetails/>}> </Route>
       </Routes>
       <Footer />
