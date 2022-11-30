@@ -51,7 +51,7 @@ function Courses() {
         <p>Grátis</p>
         <p>{course.duration}</p>
         <Link to={`/course/${course._id}`}>
-        <button className='inscrever' style={{backgroundColor: course.color}}>Inscrever-me</button>
+        <button className='inscrever' style={{backgroundColor: course.color}}>Saber mais</button>
 </Link>
         </div>
       )

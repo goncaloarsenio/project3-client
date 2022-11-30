@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+code {
+  font-family: 'Silkscreen', cursive;
+}
+
 
 .App {
   text-align: center;
   font-family: 'Montserrat';
 }
-
-nav {
+  nav {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -16,11 +21,18 @@ nav {
   height: 90px;
 }
 
+.jclogo{
+display: flex;
+align-items: flex-start;
+margin-left: 4vw;
+margin-top: 20px;
+}
+
 #people {
   width: 70vw;
 }
 
-.middle-nav {
+.middle-nav{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -379,8 +391,35 @@ color: #373f41;
   background-repeat: no-repeat;
 }
 
+/* .---------------------------------------------- profile ------------------------------------------------- */
+
 .profile-buttons{
   display: flex;
   flex-direction: row;
   margin-left: 4vh;
+}
+
+.profile-vector{
+width: 90vw;
+height: 30vh;
+margin-bottom: 10px;
+}
+
+.profile{
+  width: 300px;
+  height: 250px;
+  background-image: url('./images/Vector\ 10.svg');
+  background-size: cover;
+  background-repeat:no-repeat;
+  margin-left: 15vw;
+}
+.profile-form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-image: url('./images/Vector\ 42.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 70px;
+  padding-top: 20px;
 }

@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../contexts/auth.context";
 import { useContext } from "react";
+import userEvent from "@testing-library/user-event";
 
 function EditProfile() {
   const [email, setEmail] = useState("");
@@ -96,8 +97,15 @@ function EditProfile() {
   };
   return (
     <div>
+
+<div className="profile">
+<h1> {firstName} {lastName}!</h1>
+</div>
+
+
+
       <div className="div-profile">
-        <form className="form" onSubmit={handleSubmit}>
+        <form className="profile-form" onSubmit={handleSubmit}>
           <label class="edit-cat" htmlFor="email">
             Email
           </label>
