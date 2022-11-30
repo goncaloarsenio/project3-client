@@ -66,7 +66,7 @@ function EditProfile() {
         interests,
         description,
       };
-      await axios.put(`http://localhost:5005/api/profile/${id}`, body, {
+      await axios.put(`${process.env.REACT_APP_API_URL}/profile/${id}`, body, {
         headers: {
           Authorization: `Bearer ${getToken}`,
         },
