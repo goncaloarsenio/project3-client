@@ -11,6 +11,8 @@ import CreateArticle from "./pages/CreateArticle.jsx";
 import EditArticle from "./pages/EditArticle.jsx";
 import Profile from './pages/Profile'
 import ExampleArticle from "./components/ExampleArticle";
+import Courses from "./pages/Courses";
+import CourseDetails from "./pages/CourseDetails";
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/courses" element={<Courses/>}> </Route>
         <Route path="/partners" element={<Partners />} />
         <Route path="/articles" element={<Article />} />
         <Route path="/signup" element={<Signup />} />
@@ -26,6 +29,7 @@ function App() {
         <Route path="/edit-article/:id" element={<EditArticle />}></Route>
         <Route path="/profile/:id" element={<Profile/>}> </Route>
         <Route path="/ex-article" element={<ExampleArticle />}></Route>
+        <Route path="/course/:id" element={<CourseDetails/>}> </Route>
       </Routes>
       <Footer />
     </div>
