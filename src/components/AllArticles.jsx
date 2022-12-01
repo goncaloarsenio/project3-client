@@ -12,21 +12,22 @@ import Image10 from "../images/neonbrand-87EqZAWN-v8-unsplash.png";
 import Image11 from "../images/campaign-creators-qCi_MzVODoU-unsplash.png";
 import Image12 from "../images/charles-deluvio-rRWiVQzLm7k-unsplash.png";
 import Image13 from "../images/leon-0K7GgiA8lVE-unsplash.png";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 /* import CreateForm from '../components/CreateForm' */
 
 function Article() {
   const [articles, setArticles] = useState([]);
-  const {id} = useParams();
+  const { id } = useParams();
+  const navigate = useNavigate();
   const getArticles = async () => {
     try {
       const response = await axios.get(
         `${process.env.REACT_APP_API_URL}/articles`
       );
       setArticles(response.data);
-      console.log(response.data)
+      console.log(response.data);
     } catch (error) {
       console.log(error);
     }
@@ -37,55 +38,59 @@ function Article() {
   }, []);
 
   //adicionar favoritos
- const addFavorite = async (id) => {
-  try {
-    const storedToken = localStorage.getItem('authToken');
-    await axios.put(`${process.env.REACT_APP_API_URL}/favorites/${id}`, null, {
-      headers: { Authorization: `Bearer ${storedToken}` }});
-    
-  } catch (error) {
-    console.log(error)
-    
-  }
- }
-
-
+  const addFavorite = async (id) => {
+    try {
+      const storedToken = localStorage.getItem("authToken");
+      const response = await axios.put(
+        `${process.env.REACT_APP_API_URL}/favorite/${id}`,
+        null,
+        {
+          headers: { Authorization: `Bearer ${storedToken}` },
+        }
+      );
+      setArticles(response.data);
+      navigate("/");
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div>
-
-      <div class="main-article">
+      <div className="main-article">
         <img className="articles-img1" src={Image} alt="" />
         <div>
-          <h1> Artigos Informativos</h1>
-          <p>
+          <h1 className="create-h1"> Artigos Informativos</h1>
+          <p className="create-text">
             Aqui encontras artigos organizados e simplificados para encontrares
             toda a informação num piscar de olhos!
           </p>
           <Link to="/create-article">
-            <button className="createButton"> Create article</button>
+            <button className="createButton"> Criar artigo</button>
           </Link>
         </div>
       </div>
 
-      {articles.map(article => {
-    return(
-      <div>
-      <img className="img2" src={article.img} alt="" />
-      <div className="articleOneText">
-        <h4 className="cartaApresentacao">{article.intro}</h4>
-        <Link className="articleTitle" to={`/edit-article/${article._id}`}>
-          <h2>{article.name}</h2>
-        </Link>
-        <p>
-         {article.description}
-        </p>
+      {articles.map((article) => {
+        return (
+          <div>
+            <img className="img2" src={article.img} alt="" />
+            <div className="articleOneText">
+              <h4 className="cartaApresentacao">{article.intro}</h4>
+              <Link
+                className="articleTitle"
+                to={`/article/${article._id}`}
+              >
+                <h2>{article.name}</h2>
+              </Link>
+              <p>{article.description}</p>
 
-        <button onClick={() => addFavorite(article._id)}>Like</button>
-      </div>
-    </div>
-    )
-  })}
+              <button clasName="" onClick={() => addFavorite(article._id)}>Like</button>
+            </div>
+          </div>
+        );
+      })}
 
       <div id="CartaMotivacao">
         <div className="articleOne">

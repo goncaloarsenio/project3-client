@@ -71,8 +71,8 @@ margin-top: 20px;
   flex-direction: row;
   align-items: center;
   text-align: left;
-  margin: 20px;
-  width: 90vw;
+
+ 
   border-radius: 20px;
   font-size: 12px;
   margin-bottom: 80px;
@@ -134,14 +134,24 @@ body {
   cursor: pointer;
 }
 
+.create-text{
+  font-size: 18px;
+}
+
+.create-h1{
+  padding-right: 10px;
+}
+
 .createButton {
   background-color: #e86a50;
   border: none;
   color: #f4efe9;
-  height: 40px;
+  height: 45px;
   border-radius: 10px;
   margin-top: 10px;
+  font-size: 20px;
 }
+
 
 .img2 {
   width: 250px;
@@ -366,6 +376,8 @@ color:#373f41;
   border-radius: 20px;
   margin-left: 4vh;
   border: 1px solid #373f41;
+ /*  padding-right: 10px; */
+  padding-left: 10px;
 }
 
 .edit-cat{
@@ -422,4 +434,8 @@ margin-bottom: 10px;
   background-repeat: no-repeat;
   margin-top: 70px;
   padding-top: 20px;
+}
+
+.form-select{
+  padding-right: 5px;
 }

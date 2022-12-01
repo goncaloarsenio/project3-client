@@ -12,7 +12,7 @@ function closeNav() {
 }
 
 function Navbar() {
-  const { user, authenticateUser } = useContext(AuthContext);
+  const { user, authenticateUser, logout } = useContext(AuthContext);
 
   useEffect(() => {
     authenticateUser();
@@ -31,23 +31,50 @@ function Navbar() {
           &times;
         </Link>
         <div className="overlay-content">
-          <Link to="/articles" className="middle-nav-link" onClick={closeNav}>
-            <p>Artigos</p>
-          </Link>
-          <Link to="/courses" className="middle-nav-link" onClick={closeNav}>
-            <p>Cursos</p>
-          </Link>
-          <Link to="/partners" className="middle-nav-link" onClick={closeNav}>
-            <p>Parceiros</p>
-          </Link>
+          {!user && (
+            <>
+              <Link to="/login" className="middle-nav-link" onClick={closeNav}>
+                <p>Entrar</p>
+              </Link>
+              <Link to="/signup" className="middle-nav-link" onClick={closeNav}>
+                <p>Criar Conta</p>
+              </Link>
+            </>
+          )}
           {user && (
-            <Link
-              to={`/profile/${user._id}`}
-              className="middle-nav-link"
-              onClick={closeNav}
-            >
-              <p>Perfil</p>
-            </Link>
+            <>
+              <Link
+                to="/articles"
+                className="middle-nav-link"
+                onClick={closeNav}
+              >
+                <p>Artigos</p>
+              </Link>
+              <Link
+                to="/courses"
+                className="middle-nav-link"
+                onClick={closeNav}
+              >
+                <p>Cursos</p>
+              </Link>
+              <Link
+                to="/partners"
+                className="middle-nav-link"
+                onClick={closeNav}
+              >
+                <p>Parceiros</p>
+              </Link>
+              <Link
+                to={`/profile/${user._id}`}
+                className="middle-nav-link"
+                onClick={closeNav}
+              >
+                <p>Perfil</p>
+              </Link>
+              <Link to="/" className="middle-nav-link" onClick={() => { logout(); closeNav();}}>
+                <p>Sair</p>
+              </Link>
+            </>
           )}
         </div>
       </div>

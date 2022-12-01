@@ -13,6 +13,7 @@ import Profile from './pages/Profile'
 import ExampleArticle from "./components/ExampleArticle";
 import Courses from "./pages/Courses";
 import CourseDetails from "./pages/CourseDetails";
+import ArticleDetails from "./components/ArticleDetails";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/profile/:id" element={<Profile/>}> </Route>
         <Route path="/ex-article" element={<ExampleArticle />}></Route>
         <Route path="/course/:id" element={<CourseDetails/>}> </Route>
+        <Route path="/article/:id" element={<ArticleDetails/>}> </Route>
       </Routes>
       <Footer />
     </div>

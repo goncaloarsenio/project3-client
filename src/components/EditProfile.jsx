@@ -99,7 +99,7 @@ function EditProfile() {
     <div>
 
 <div className="profile">
-<h1> {firstName} {lastName}!</h1>
+<h1 className="username"> {firstName} {lastName}</h1>
 </div>
 
 
@@ -119,7 +119,7 @@ function EditProfile() {
             }}
           />
 
-          <label class="edit-cat" htmlFor="firstName">
+          <label className="edit-cat" htmlFor="firstName">
             Nome
           </label>
           <input
@@ -132,7 +132,7 @@ function EditProfile() {
             }}
           />
 
-          <label class="edit-cat" htmlFor="lastName">
+          <label className="edit-cat" htmlFor="lastName">
             Apelido
           </label>
           <input
@@ -145,7 +145,7 @@ function EditProfile() {
             }}
           />
 
-          <label class="edit-cat" htmlFor="description">
+          <label className="edit-cat" htmlFor="description">
             Descrição
           </label>
           <textarea
@@ -161,7 +161,7 @@ function EditProfile() {
             {" "}
           </textarea>
 
-          <label class="edit-cat" htmlFor="genre">
+          <label className="edit-cat" htmlFor="genre">
             Género
           </label>
           <select
@@ -171,15 +171,15 @@ function EditProfile() {
               setGenre(e.target.value);
             }}
           >
-            <option value="Masculino" selected={genre === "Masculino"}>
+            <option value="Masculino form-select" selected={genre === "Masculino"}>
               Masculino
             </option>
-            <option value="Feminino" selected={genre === "Feminino"}>
+            <option value="Feminino form-select" selected={genre === "Feminino"}>
               Feminino
             </option>
           </select>
 
-          <label class="edit-cat" htmlFor="birthdayDate">
+          <label className="edit-cat form-date" htmlFor="birthdayDate">
             Data de Nascimento
           </label>
           <input
@@ -192,7 +192,7 @@ function EditProfile() {
             }}
           />
 
-          <label class="edit-cat" htmlFor="phoneNumber">
+          <label className="edit-cat" htmlFor="phoneNumber">
             Telemovel
           </label>
           <input
@@ -205,7 +205,7 @@ function EditProfile() {
             }}
           />
 
-          <label class="edit-cat" htmlFor="residenceArea">
+          <label className="edit-cat" htmlFor="residenceArea">
             Area de Residência
           </label>
           <input
@@ -218,7 +218,7 @@ function EditProfile() {
             }}
           />
 
-          <label class="edit-cat" htmlFor="formationDegree">
+          <label className="edit-cat" htmlFor="formationDegree">
             Grau de Formação
           </label>
           <select
