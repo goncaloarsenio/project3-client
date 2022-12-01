@@ -16,7 +16,7 @@ function CreateForm() {
         try {
             e.preventDefault();
             const body = {article, name, intro, img, description} 
-            await axios.post('http://localhost:5005/api/articles', body, {
+            await axios.post(`${process.env.REACT_APP_API_URL}/articles`, body, {
             headers: {
               Authorization: `Bearer ${getToken}`,},})
 
