@@ -40,7 +40,7 @@ function EditForm() {
     try {
       e.preventDefault();
       const body = { article, name, intro, img, description };
-      await axios.put(`http://localhost:5005/api/articles/${id}`, body);
+      await axios.put(`${process.env.REACT_APP_API_URL}/articles/${id}`, body);
       setArticle("");
       setName("");
       setIntro("");
@@ -56,10 +56,12 @@ function EditForm() {
   return (
     <div>
       <div className="edit-form">
-        <form  className="form" onSubmit={handleSubmit}>
-          <label className="edit-cat" htmlFor="article">Categoria</label>
+        <form className="form" onSubmit={handleSubmit}>
+          <label className="edit-cat" htmlFor="article">
+            Categoria
+          </label>
           <input
-           className="input-edit"
+            className="input-edit"
             type="text"
             name="article"
             value={article}
@@ -68,9 +70,11 @@ function EditForm() {
             }}
           />
 
-          <label className="edit-cat" htmlFor="name">Titulo</label>
+          <label className="edit-cat" htmlFor="name">
+            Titulo
+          </label>
           <input
-           className="input-edit"
+            className="input-edit"
             type="text"
             name="name"
             value={name}
@@ -79,9 +83,11 @@ function EditForm() {
             }}
           />
 
-          <label className="edit-cat" htmlFor="intro">Introdução</label>
+          <label className="edit-cat" htmlFor="intro">
+            Introdução
+          </label>
           <input
-           className="input-edit"
+            className="input-edit"
             type="text"
             name="intro"
             value={intro}
@@ -90,9 +96,11 @@ function EditForm() {
             }}
           />
 
-          <label className="edit-cat" htmlFor="img">Img URL</label>
+          <label className="edit-cat" htmlFor="img">
+            Img URL
+          </label>
           <input
-           className="input-edit"
+            className="input-edit"
             type="text"
             name="img"
             value={img}
@@ -101,9 +109,11 @@ function EditForm() {
             }}
           />
 
-          <label className="edit-cat" htmlFor="description">Descrição</label>
+          <label className="edit-cat" htmlFor="description">
+            Descrição
+          </label>
           <textarea
-          className="input-edit"
+            className="input-edit"
             name="description"
             value={description}
             cols="30"
@@ -115,7 +125,9 @@ function EditForm() {
             {" "}
           </textarea>
 
-          <button  className="form-button" type="submit">Editar Artigo</button>
+          <button className="form-button" type="submit">
+            Editar Artigo
+          </button>
         </form>
       </div>
     </div>
