@@ -184,6 +184,7 @@ body {
   background-image: url('./images/Vector\ 42.svg');
   background-size: cover;
   background-repeat: no-repeat;
+  box-shadow: -10px -3px 20px rgba(0, 0, 0, 0.12);
 }
 
 .img6-9 {
@@ -320,6 +321,14 @@ body {
   display: flex;
   flex-direction: column;
   
+}
+
+.username{
+  padding-top: 90px;
+}
+
+.div-profile{
+  box-shadow: -10px -3px 20px rgba(0, 0, 0, 0.12);
 }
 
 /* ---------------------------- Example-Article------------------------------- */

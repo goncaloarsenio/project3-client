@@ -100,6 +100,7 @@ function EditProfile() {
 
 <div className="profile">
 <h1 className="username"> {firstName} {lastName}</h1>
+<p>{formationArea}</p>
 </div>
 
 
@@ -284,11 +285,11 @@ function EditProfile() {
             }}
           />
 <div className="progile-buttons">
-          <button className="edit-button" type="submit">
+          <button className="entryButton saveprof" type="submit">
             Guardar
           </button>
 
-        <button className="edit-button" onClick={deleteProfile}>
+        <button className="notYetButton deleteprof" onClick={deleteProfile}>
           Delete Profile
         </button>
 </div>
