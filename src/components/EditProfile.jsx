@@ -106,14 +106,15 @@ function EditProfile() {
     }
   };
 
-  
   return (
     <div>
-
-<div className="profile">
-<h1 className="username"> {firstName} {lastName}</h1>
-<p>{formationArea}</p>
-</div>
+      <div className="profile">
+        <h1 className="username">
+          {" "}
+          {firstName} {lastName}
+        </h1>
+        <p>{formationArea}</p>
+      </div>
 
       <div className="div-profile">
         <form className="profile-form" onSubmit={handleSubmit}>
@@ -300,36 +301,39 @@ function EditProfile() {
               setInterestAreas(e.target.value);
             }}
           />
-<div className="progile-buttons">
-          <button className="entryButton saveprof" type="submit">
-            Guardar
-          </button>
+          <div className="progile-buttons">
+            <button className="entryButton saveprof" type="submit">
+              Guardar
+            </button>
 
-        <button className="notYetButton deleteprof" onClick={deleteProfile}>
-          Delete Profile
-        </button>
-</div>
+            <button className="notYetButton deleteprof" onClick={deleteProfile}>
+              Delete Profile
+            </button>
+          </div>
         </form>
-        <p>Gostos:</p>
-        {favorites.map((fav) => (
-          <>
-            <h1>{fav.name}</h1>
-            <p>Intro:</p>
-            <p>{fav.intro}</p>
-            <img className="" src={fav.img} alt="LUCAS" />
-          </>
-        ))}
+        <h1 className="favs-h1">Artigos que gostaste:</h1>
+        <div className="favs">
+          {favorites.map((fav) => (
+            <>
+              <h1>{fav.name}</h1>
+              <p>Intro:</p>
+              <p>{fav.intro}</p>
+              <img className="img-profile" src={fav.img} alt="LUCAS" />
+            </>
+          ))}
+        </div>
 
-        <h1>inscrições:</h1>
-
-        {subscribed.map((sub) => (
-          <>
-            <h1>{sub.name}</h1>
-            <p>Company:</p>
-            <p>{sub.company}</p>
-            <img src={sub.img} alt="LUCAS" />
-          </>
-        ))}
+        <h1 className="inscricoes-h1">Inscrições:</h1>
+        <div className="inscricoes">
+          {subscribed.map((sub) => (
+            <>
+              <h1>{sub.name}</h1>
+              <p>Company:</p>
+              <p>{sub.company}</p>
+              <img src={sub.img} alt="LUCAS" />
+            </>
+          ))}
+        </div>
       </div>
     </div>
   );

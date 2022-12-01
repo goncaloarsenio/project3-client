@@ -32,11 +32,11 @@ function ArticleDetails() {
 {article && (
 <>
 
-    <h1>{article.name}</h1>
-    <h3>{article.intro}</h3>
-    <img src={article.img} alt="" />
-    <p>{article.article}</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque similique enim quasi voluptatum libero architecto aliquam cum ea ut rerum? Ipsum, debitis. Recusandae laboriosam ducimus adipisci odit at asperiores deleniti!</p>
+    <h1 className="article-details-name">{article.name}</h1>
+    <h3 className="article-details-intro">{article.intro}</h3>
+    <img className="article-details-img" src={article.img} alt="" />
+    <p className="article-details-article">{article.article}</p>
+    <p className="article-details-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque similique enim quasi voluptatum libero architecto aliquam cum ea ut rerum? Ipsum, debitis. Recusandae laboriosam ducimus adipisci odit at asperiores deleniti!</p>
     <Link to={`/edit-article/${id}`}>
         <p> Editar</p>
       </Link>
