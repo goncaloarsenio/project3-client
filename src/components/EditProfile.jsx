@@ -317,7 +317,7 @@ function EditProfile() {
             <h1>{fav.name}</h1>
             <p>Intro:</p>
             <p>{fav.intro}</p>
-            <img src={fav.img} alt="LUCAS" />
+            <img className="" src={fav.img} alt="LUCAS" />
           </>
         ))}
 
