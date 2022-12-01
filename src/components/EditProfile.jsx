@@ -18,6 +18,8 @@ function EditProfile() {
   const [interestAreas, setInterestAreas] = useState("");
   const [interests, setInterests] = useState("");
   const [description, setDescription] = useState("");
+  const [favorites, setFavorites] = useState([]);
+  const [subscribed, setSubscribed] = useState([]);
   const { logout } = useContext(AuthContext);
 
   const getToken = localStorage.getItem("authToken");
@@ -43,6 +45,8 @@ function EditProfile() {
       setInterestAreas(response.data.interestAreas);
       setInterests(response.data.interests);
       setDescription(response.data.description);
+      setFavorites(response.data.favorites);
+      setSubscribed(response.data.subscribed);
       console.log(response.data);
     } catch (error) {
       console.log(error);
@@ -69,6 +73,8 @@ function EditProfile() {
         interestAreas,
         interests,
         description,
+        favorites,
+        subscribed,
       };
       await axios.put(`${process.env.REACT_APP_API_URL}/profile/${id}`, body, {
         headers: {
@@ -84,25 +90,31 @@ function EditProfile() {
 
   const deleteProfile = async () => {
     try {
-      await axios.delete(`${process.env.REACT_APP_API_URL}/profile/${id}`, null, {
-        headers: {
-          Authorization: `Bearer ${getToken}`,
-        },
-      });
+      await axios.delete(
+        `${process.env.REACT_APP_API_URL}/profile/${id}`,
+        null,
+        {
+          headers: {
+            Authorization: `Bearer ${getToken}`,
+          },
+        }
+      );
       logout();
       navigate("/login");
     } catch (error) {
       console.log(error);
     }
   };
+
+  
   return (
     <div>
-
-<div className="profile">
-<h1 className="username"> {firstName} {lastName}</h1>
-</div>
-
-
+      <div className="profile">
+        <h1 className="username">
+          {" "}
+          {firstName} {lastName}
+        </h1>
+      </div>
 
       <div className="div-profile">
         <form className="profile-form" onSubmit={handleSubmit}>
@@ -171,10 +183,16 @@ function EditProfile() {
               setGenre(e.target.value);
             }}
           >
-            <option value="Masculino form-select" selected={genre === "Masculino"}>
+            <option
+              value="Masculino form-select"
+              selected={genre === "Masculino"}
+            >
               Masculino
             </option>
-            <option value="Feminino form-select" selected={genre === "Feminino"}>
+            <option
+              value="Feminino form-select"
+              selected={genre === "Feminino"}
+            >
               Feminino
             </option>
           </select>
@@ -283,17 +301,36 @@ function EditProfile() {
               setInterestAreas(e.target.value);
             }}
           />
-<div className="progile-buttons">
-          <button className="edit-button" type="submit">
-            Guardar
-          </button>
+          <div className="progile-buttons">
+            <button className="profile-buttons" type="submit">
+              Guardar
+            </button>
 
-        <button className="edit-button" onClick={deleteProfile}>
-          Delete Profile
-        </button>
-</div>
+            <button className="profile-buttons" onClick={deleteProfile}>
+              Delete Profile
+            </button>
+          </div>
         </form>
+        <p>Gostos:</p>
+        {favorites.map((fav) => (
+          <>
+            <h1>{fav.name}</h1>
+            <p>Intro:</p>
+            <p>{fav.intro}</p>
+            <img src={fav.img} alt="LUCAS" />
+          </>
+        ))}
 
+        <h1>inscrições:</h1>
+
+        {subscribed.map((sub) => (
+          <>
+            <h1>{sub.name}</h1>
+            <p>Company:</p>
+            <p>{sub.company}</p>
+            <img src={sub.img} alt="LUCAS" />
+          </>
+        ))}
       </div>
     </div>
   );

@@ -86,7 +86,7 @@ function Article() {
               </Link>
               <p>{article.description}</p>
 
-              <button clasName="" onClick={() => addFavorite(article._id)}>Like</button>
+              <button className="like-button" onClick={() => addFavorite(article._id)}>Gosto</button>
             </div>
           </div>
         );
