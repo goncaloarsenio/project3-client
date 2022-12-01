@@ -40,33 +40,6 @@ function Footer() {
             </div>
 
 
-            <div className='upfooter-s2 upfooter-section'>
-            <h3>Junta-te à equipa</h3>
-            <p>Como parceiro</p>
-            <p>Vagas de Emprego</p>
-            <p>Candidatura Espontânea</p>
-            </div>
-
-            <div className='upfooter-s3 upfooter-section'>
-            <h3>JobCoach</h3>
-            <Link to="/articles" className='footer-link'>
-            <p>Artigos</p>
-            </Link>
-            <Link to="/partners" className='footer-link'>
-            <p>Parceiros</p>
-            </Link>
-            </div>
-
-
-            <div className='upfooter-s4 upfooter-section'>
-            <h3>Suporte</h3>
-            <p>Contacta-nos</p>
-            <p>FAQ</p>
-            <p>Termos de Uso e Condições</p>
-            <p>Política de Privacidade</p>
-            <p>Política de Cookies</p>
-            </div>
-
 
         </div>
 
@@ -74,7 +47,7 @@ function Footer() {
         <hr className='footer-hr'/>
 
         <div className='bottom-footer'>
-            <p>© JobCoach 2021</p>
+            <p>© JobCoach 2022</p>
 
             <div className='footer-allmedia'>
             <img src={Twitter} alt="" className='footer-media'/>

@@ -155,10 +155,12 @@ padding: 0 40px;
   background-image: url('./images/Vector\ 42.svg');
   background-size: cover;
   background-repeat: no-repeat;
+  box-shadow: -10px -3px 20px rgba(0, 0, 0, 0.12);
 }
 
 .s1-partners-h1{
   color: #E86A50;
+  padding-top: 20px;
 }
 
 .s1-partners-p{
@@ -353,4 +355,9 @@ p{
 
 .course-name{
   margin: 0 20px;
+}
+
+
+.progile-buttons{
+  margin-left: 30px;
 }

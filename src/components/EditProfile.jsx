@@ -109,12 +109,11 @@ function EditProfile() {
   
   return (
     <div>
-      <div className="profile">
-        <h1 className="username">
-          {" "}
-          {firstName} {lastName}
-        </h1>
-      </div>
+
+<div className="profile">
+<h1 className="username"> {firstName} {lastName}</h1>
+<p>{formationArea}</p>
+</div>
 
       <div className="div-profile">
         <form className="profile-form" onSubmit={handleSubmit}>
@@ -301,15 +300,15 @@ function EditProfile() {
               setInterestAreas(e.target.value);
             }}
           />
-          <div className="progile-buttons">
-            <button className="profile-buttons" type="submit">
-              Guardar
-            </button>
+<div className="progile-buttons">
+          <button className="entryButton saveprof" type="submit">
+            Guardar
+          </button>
 
-            <button className="profile-buttons" onClick={deleteProfile}>
-              Delete Profile
-            </button>
-          </div>
+        <button className="notYetButton deleteprof" onClick={deleteProfile}>
+          Delete Profile
+        </button>
+</div>
         </form>
         <p>Gostos:</p>
         {favorites.map((fav) => (
