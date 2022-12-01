@@ -1,7 +1,7 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
 import axios from 'axios'
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 function ArticleDetails() {
 
@@ -37,7 +37,9 @@ function ArticleDetails() {
     <img src={article.img} alt="" />
     <p>{article.article}</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque similique enim quasi voluptatum libero architecto aliquam cum ea ut rerum? Ipsum, debitis. Recusandae laboriosam ducimus adipisci odit at asperiores deleniti!</p>
-
+    <Link to={`/edit-article/${id}`}>
+        <p> Editar</p>
+      </Link>
 </>
 
 )}
